@@ -1,0 +1,47 @@
+class Animal:
+  def __init__(self, animal_limbs= None, animal_type = None): #constructor
+    self.animal_limbs = animal_limbs
+    self.animal_type = animal_type
+    
+  def make_sound(self): #method
+    print("hi")
+    
+#subclasses
+
+class Bird(Animal): #inherits the animal class
+  def make_sound(self):
+    print("ChiiRRpp")
+    
+  def peck(self):
+    print("*"*self.num_limbs)
+    
+class Dog(Animal):
+  def make_sound(self):
+    print("BooRRK")
+    
+#the unicorn doesn't have a sound but it will likely print "hi"
+class Unicorn(Animal):
+    pass
+
+    
+#Creating the object/instances of the object    
+#bird = Bird(4, "flying")
+#dog = Dog(4, "mammal")
+
+#OR you can 
+
+animals = [
+  Bird(2, "bird"),
+  Dog(4, "mammal"),
+  Unicorn(5, "mammal")
+]
+
+
+for animal in animals:
+  animal.make_sound()
+
+
+
+
+
+    
